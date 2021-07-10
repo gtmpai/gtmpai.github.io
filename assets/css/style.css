@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    height: 200vh;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 15px;
+    background-color: rgb(32, 32, 32);
+    width: 100%;
+    height: 80px;
+    transition: all .3s ease;
+}
+
+.navbar ul{
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    
+}
+
+.navbar ul li{
+    justify-content: space-around;
+    padding: 0 5px;
+    
+}
+.navbar ul li a{
+    color: rgb(206, 206, 206);
+    text-decoration: none;
+    padding: .3rem .8rem;
+}
+.navbar ul li a.active{
+    color: rgb(206, 206, 206);
+    text-decoration: none;
+    background-color: rgb(64, 45, 80);
+    border-radius: 15px;
+}
+.navbar ul li a:hover{
+    background-color: rgb(64, 45, 80);
+    border-radius: 15px;
+    transition: all .3s ease-in;
+}
+.navbar ul li a:active{
+    background-color: rgb(88, 62, 109);
+    transition: all .1s ease-in;
+}
+
+#section1{
+    min-height: calc(100vh - 80px);
+    color: rgb(255, 255, 255);
+    background-color: crimson;
+}
+
+#section2{
+    min-height: 100vh;
+    color: rgb(255, 255, 255);
+    background-color: darkolivegreen; 
+}
+
+.fixed{
+    position: fixed;
+}
+
+.adjust-root{
+    padding-top: 160px;
+}
