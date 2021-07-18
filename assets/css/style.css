@@ -1,83 +1,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
-html{
-    scroll-behavior: smooth;
-}
-
-
-*{
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+* {
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
     box-sizing: border-box;
 }
 
-
-
-body{
+body {
     background-color: rgb(0, 0, 0);
     color: #ffffff;
-    height: 200vh;
-}
-
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 15px;
-    background-color: rgb(32, 32, 32);
+    height: 100vh;
     width: 100%;
-    height: 80px;
-    transition: all .3s ease;
 }
 
-.navbar ul{
+.landing-container {
+    width: 100%;
+    height: 100%;
+    background: #000428;
+    background: -webkit-linear-gradient(to right, #004e92, #000428);
+    background: linear-gradient(to right, #004e92, #000428);
+}
+
+.landing-container .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.landing-container .wrapper .background,
+.landing-container .wrapper .background img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.landing-container .landing-main {
     display: flex;
-    text-decoration: none;
-    list-style-type: none;
-    
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
-.navbar ul li{
-    justify-content: space-around;
-    padding: 0 5px;
-    
-}
-.navbar ul li a{
-    color: rgb(206, 206, 206);
-    text-decoration: none;
-    padding: .3rem .8rem;
-}
-.navbar ul li a.active{
-    color: rgb(206, 206, 206);
-    text-decoration: none;
-    background-color: rgb(64, 45, 80);
-    border-radius: 15px;
-}
-.navbar ul li a:hover{
-    background-color: rgb(64, 45, 80);
-    border-radius: 15px;
-    transition: all .3s ease-in;
-}
-.navbar ul li a:active{
-    background-color: rgb(88, 62, 109);
-    transition: all .1s ease-in;
+.landing-container .landing-main .landing-image {
+    position: relative;
+    height: 20rem;
+    width: 20rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: levitate 4s ease infinite;
 }
 
-#section1{
-    min-height: calc(100vh - 80px);
+.landing-container .landing-main .landing-image:hover {
+    height: 21rem;
+    width: 21rem;
+    cursor: pointer;
+}
+
+.landing-container .landing-main .landing-title {
+    font-family: 'Patua One', cursive;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+.landing-container .landing-main .landing-title a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.landing-container .landing-main .landing-sub-title {
+    font-family: 'Patua One', cursive;
+    font-size: 0.85rem;
+    margin: -5px;
+    padding: 0;
+    text-transform: uppercase;
     color: rgb(255, 255, 255);
-    background-color: crimson;
 }
 
-#section2{
-    min-height: 100vh;
-    color: rgb(255, 255, 255);
-    background-color: darkolivegreen; 
+.landing-container .landing-main .landing-sub-title1 {
+    font-family: 'Patua One', cursive;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: rgb(173, 173, 173);
+    margin-top: 13px;
 }
 
-.fixed{
-    position: fixed;
-}
-
-.adjust-root{
-    padding-top: 160px;
+@keyframes levitate {
+    0% {
+        top: 0px;
+    }
+    50% {
+        filter: drop-shadow(0 0 3px rgba(223, 223, 223, 0.507));
+        top: 4px;
+    }
+    100% {
+        top: 0px;
+    }
 }
