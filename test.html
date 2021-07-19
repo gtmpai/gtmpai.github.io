@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav a {
+            display: block;
+        }
+        
+        section {
+            height: 600px;
+            border-top: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navlist">
+        <a href="#s1">Go to Section 1</a>
+        <a href="#s2">Go to Section 2</a>
+        <a href="#s3">Go to Section 3</a>
+    </nav>
+    <section id="s1">Section 1 Content</section>
+    <section id="s2">Section 2 Content</section>
+    <section id="s3">Section 3 Content</section>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script>
+        navlist = [];
+        $("#navlist a").each(function(i) {
+            var thisLink = $(this);
+            var thisId = thisLink.attr('href');
+            var thisTarget = $(thisId);
+            navlist.push({
+                'anchor': thisLink,
+                'id': thisId,
+                'target': thisTarget
+            });
+            thisLink.on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: thisTarget.offset().top
+                }, 800);
+            });
+        });
+        $(window).on('scroll', function(e) {
+            $.each(navlist, function(e, elem) {
+                var placement = elem.target[0].getBoundingClientRect();
+                if (placement.top < window.innerHeight && placement.bottom > 0) {
+                    history.pushState({}, '', elem.id);
+                    console.log('Hash: ' + elem.id);
+                    return false; /* Exit $.each loop */
+                };
+            });
+        });
+    </script>
+</body>
+
+</html>

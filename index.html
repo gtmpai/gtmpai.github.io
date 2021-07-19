@@ -12,75 +12,258 @@
 </head>
 
 <body>
-    <!-- <section class="sticky-nav">
-        <nav class="nav" id="nav">
-            <ul>
-                <li><a class="active" href="">Home</a> </li>
-                <li><a href="#about">About me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </section> -->
-    <div class="landing-container" id="home">
-        <div class="wrapper">
-            <div class="background">
-                <img src="./assets/images/background/bg1.jpg" alt="">
+    <div id="container">
+        <section id="navigation-reactive" class="navigation-reactive">
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a class="nav-link active" href="#home">Home</a> </li>
+                    <li><a class="nav-link" href="#about">About me</a></li>
+                    <li><a class="nav-link" href="#knowledge">Knowledge</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+        <div class="landing-container scrollspy" id="home">
+            <div class="wrapper">
+                <div class="background">
+                    <img src="./assets/images/background/bg1.jpg" alt="">
+                </div>
+                <div class="landing-main">
+                    <img src="./assets/images/Bitmoji/1.png" id="landing-image" class="landing-image">
+                    <span class="landing-title"><a href="https://gtmpai.github.io/">GOUTHAM PAI K</a></span>
+                    <span class="landing-sub-title">Welcome to my portfolio website</span>
+                    <span class="landing-sub-title1">Powered by <i class='bx bxl-github'></i> GitHub</span>
+                </div>
             </div>
-            <div class="landing-main">
-                <img src="./assets/images/Bitmoji/1.png" id="landing-image" class="landing-image">
-                <span class="landing-title"><a href="https://gtmpai.github.io/">GOUTHAM PAI K</a></span>
-                <span class="landing-sub-title">Welcome to my portfolio website</span>
-                <span class="landing-sub-title1">Powered by <i class='bx bxl-github'></i> GitHub</span>
+        </div>
+        <div class="about-container scrollspy" id="about">
+            <div class="wrapper">
+                <div class="background">
+                    <img src="./assets/images/background/bg2.jpg" alt="">
+                </div>
+                <div class="about-main">
+                    <div class="image">
+                        <img src="./assets/images/Bitmoji/3.png" alt="" class="about-image">
+                        <span class="about-title">About me</span>
+                    </div>
+                    <div class="card">
+                        <p>Experienced Functional tester with a demonstrated history of working in the information technology and services industry. Skilled in PHP, Communication, DevOps, Test Automation, and Jenkins. Strong quality assurance professional
+                            with a Bachelor of Computer Applications focused in Computer Science from Vivekananda College of Education, Puttur.</p>
+                        <br>
+                        <p>Able to write industry stadard code and able to design things creativly.</p>
+                    </div>
 
-                <nav class="nav" id="nav">
-                    <ul>
-                        <li><a class="active" href="">Home</a> </li>
-                        <li><a href="#about">About me</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
+                </div>
             </div>
+        </div>
+        <div class="skills-container scrollspy" id="knowledge">
+            <div class="wrapper">
+                <div class="background">
+                    <img src="./assets/images/background/bg3.jpg" alt="">
+                </div>
+                <div class="skills-main">
+                    <div class="skills-img">
+                        <img src="./assets/images/Bitmoji/3.png" alt="" class="about-image">
+                        <span class="skills-title">My Knowlege</span>
+                    </div>
+                    <div class="skills-card">
+                        <div id="skills-content" class="skills-content">
+                            <div class="skill-set">
+                                <h5>Automation testing tools & frameworks</h5>
+                                <div class="skills">
+                                    <div class="skill" title="Selenium">
+                                        <img src="./assets/images/skills/selenium.png" alt="" srcset="">
+                                        <span>Selenium</span>
+                                    </div>
+                                    <div class="skill" title="TestNG">
+                                        <img src="./assets/images/skills/testng.png" alt="" srcset="">
+                                        <span>TestNG</span>
+                                    </div>
+                                    <div class="skill" title="Cucumber">
+                                        <img src="./assets/images/skills/cucumber.png" alt="" srcset="">
+                                        <span>Cucumber</span>
+                                    </div>
+                                    <div class="skill" title="jUnit">
+                                        <img src="./assets/images/skills/junit.png" alt="" srcset="">
+                                        <span>jUnit</span>
+                                    </div>
+                                    <div class="skill" title="Rest Assured">
+                                        <img src="./assets/images/skills/RestAssured.png" alt="" srcset="">
+                                        <span>Rest Assured</span>
+                                    </div>
+
+                                    <div class="skill" title="UFT">
+                                        <img src="./assets/images/skills/uft.png" alt="" srcset="">
+                                        <span>UFT*</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-set">
+                                <h5>Programming languages & DB</h5>
+                                <div class="skills">
+                                    <div class="skill" title="Java">
+                                        <img src="./assets/images/skills/java.png" alt="" srcset="">
+                                        <span>Java</span>
+                                    </div>
+                                    <div class="skill" title="Python">
+                                        <img src="./assets/images/skills/python.png" alt="" srcset="">
+                                        <span>Python</span>
+                                    </div>
+                                    <div class="skill" title="php">
+                                        <img src="./assets/images/skills/php.png" alt="" srcset="">
+                                        <span>PHP</span>
+                                    </div>
+                                    <div class="skill" title="JavaScript">
+                                        <img src="./assets/images/skills/js.png" alt="" srcset="">
+                                        <span>JavaScript</span>
+                                    </div>
+                                    <div class="skill" title="C++">
+                                        <img src="./assets/images/skills/cpp.png" alt="" srcset="">
+                                        <span>C++</span>
+                                    </div>
+                                    <div class="skill" title="MySql">
+                                        <img src="./assets/images/skills/mysql.png" alt="" srcset="">
+                                        <span>MySql</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-set">
+                                <h5>Markup language & Frontend frameworks</h5>
+                                <div class="skills">
+                                    <div class="skill" title="HTML">
+                                        <img src="./assets/images/skills/html.png" alt="" srcset="">
+                                        <span>HTML</span>
+                                    </div>
+                                    <div class="skill" title="Vue.js">
+                                        <img src="./assets/images/skills/vue.png" alt="" srcset="">
+                                        <span>Vue.js</span>
+                                    </div>
+                                    <div class="skill" title="JQuery">
+                                        <img src="./assets/images/skills/jquery.png" alt="" srcset="">
+                                        <span>JQuery</span>
+                                    </div>
+                                    <div class="skill" title="Bootstrap">
+                                        <img src="./assets/images/skills/bs.png" alt="" srcset="">
+                                        <span>Bootstrap</span>
+                                    </div>
+                                    <div class="skill" title="FontAwesome">
+                                        <img src="./assets/images/skills/fa.png" alt="" srcset="">
+                                        <span>FontAwesome</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="skill-set">
+                                <h5>Tools & IDE</h5>
+                                <div class="skills">
+                                    <div class="skill" title="VS code">
+                                        <img src="./assets/images/skills/vscode.png" alt="" srcset="">
+                                        <span>VS code</span>
+                                    </div>
+                                    <div class="skill" title="Eclipse">
+                                        <img src="./assets/images/skills/eclipse.png" alt="" srcset="">
+                                        <span>Eclipse</span>
+                                    </div>
+                                    <div class="skill" title="NetBeans">
+                                        <img src="./assets/images/skills/NetBeans.png" alt="" srcset="">
+                                        <span>NetBeans</span>
+                                    </div>
+                                    <div class="skill" title="Git">
+                                        <img src="./assets/images/skills/git.png" alt="" srcset="">
+                                        <span>Git</span>
+                                    </div>
+                                    <div class="skill" title="GitHub">
+                                        <img src="./assets/images/skills/GitHub.png" alt="" srcset="">
+                                        <span>GitHub</span>
+                                    </div>
+                                    <div class="skill" title="ALM">
+                                        <img src="./assets/images/skills/ALm.png" alt="" srcset="">
+                                        <span>ALM</span>
+                                    </div>
+                                    <div class="skill" title="Jenkins">
+                                        <img src="./assets/images/skills/jenkins.png" alt="" srcset="">
+                                        <span>Jenkins</span>
+                                    </div>
+                                    <div class="skill" title="Docker">
+                                        <img src="./assets/images/skills/docker.png" alt="" srcset="">
+                                        <span>Docker</span>
+                                    </div>
+                                    <div class="skill" title="Postman">
+                                        <img src="./assets/images/skills/postman.png" alt="" srcset="">
+                                        <span>Postman</span>
+                                    </div>
+                                    <div class="skill" title="SQLyog">
+                                        <img src="./assets/images/skills/sqlyog.png" alt="" srcset="">
+                                        <span>SQLyog</span>
+                                    </div>
+                                    <div class="skill" title="MySql Workbench">
+                                        <img src="./assets/images/skills/workbench.png" alt="" srcset="">
+                                        <span>MySql Workbench</span>
+                                    </div>
+                                    <div class="skill" title="MS Office">
+                                        <img src="./assets/images/skills/msoffice.png" alt="" srcset="">
+                                        <span>MS Office</span>
+                                    </div>
+                                    <div class="skill" title="XAMPP">
+                                        <img src="./assets/images/skills/xampp.png" alt="" srcset="">
+                                        <span>XAMPP</span>
+                                    </div>
+                                    <div class="skill" title="Android Studio">
+                                        <img src="./assets/images/skills/AndroidStudio.png" alt="" srcset="">
+                                        <span>Android Studio</span>
+                                    </div>
+                                    <div class="skill" title="Adobe Photoshop">
+                                        <img src="./assets/images/skills/ps.png" alt="" srcset="">
+                                        <span>Adobe Photoshop</span>
+                                    </div>
+
+                                </div>
 
 
+                            </div>
+
+
+                            <div class="skill-set">
+                                <h5>Operating systems</h5>
+                                <div class="skills">
+                                    <div class="skill" title="Windows">
+                                        <img src="./assets/images/skills/windows.png" alt="" srcset="">
+                                        <span>Windows</span>
+                                    </div>
+                                    <div class="skill" title="Linux">
+                                        <img src="./assets/images/skills/linux.png" alt="" srcset="">
+                                        <span>Linux</span>
+                                    </div>
+                                    <div class="skill" title="Android">
+                                        <img src="./assets/images/skills/Android.jpg" alt="" srcset="">
+                                        <span>Android</span>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-container" id="contact">
+            <div class="wrapper">
+                <div class="background">
+                    <img src="./assets/images/background/bg1.jpg" alt="">
+                </div>
+
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="gtmpai" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/gtmpai?trk=profile-badge">Goutham Pai K</a></div>
+
+
+
+            </div>
         </div>
 
 
     </div>
-    <div class="landing-container" id="about">
-        <div class="wrapper">
-            <div class="background">
-                <img src="./assets/images/background/bg1.jpg" alt="">
-            </div>
-            <div class="landing-main">
-                <img src="./assets/images/Bitmoji/1.png" id="landing-image" class="landing-image">
-                <span class="landing-title"><a href="https://gtmpai.github.io/">GOUTHAM PAI K</a></span>
-                <span class="landing-sub-title">Welcome to my portfolio website</span>
-                <span class="landing-sub-title1">Powered by <i class='bx bxl-github'></i> GitHub</span>
-
-                <nav class="nav" id="nav">
-                    <ul>
-                        <li><a class="active" href="#home">Home</a> </li>
-                        <li><a href="#about">About me</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <script src="assets/js/script.js" type="text/javascript"></script>
 </body>
 
