@@ -55,7 +55,7 @@
         height: 100%;
         z-index: 5;
         position: relative;
-        top: -80px;
+        top: -85px;
     }
     
     .landing-container .landing-main .landing-image {
@@ -83,8 +83,14 @@
     }
     
     .landing-container .landing-main .landing-title a {
+        transition: all 0.2s ease-in-out;
         color: #ffffff;
         text-decoration: none;
+    }
+    
+    .landing-container .landing-main .landing-title a:hover {
+        transition: all 0.2s ease-in-out;
+        color: #ecfd4e;
     }
     
     .landing-container .landing-main .landing-sub-title {
@@ -114,7 +120,7 @@
         align-items: center;
         position: absolute;
         width: 100%;
-        top: 30rem;
+        top: 31rem;
         z-index: 99999999;
         transition: all 1s ease-in-out;
     }
@@ -182,52 +188,12 @@
         height: 100%;
     }
     
-    .sticky-na6666666v .nav ul li a:hover {
+    .sticky-nav .nav ul li a:hover {
         background-color: rgb(231, 210, 18);
     }
     
     .sticky-nav .nav ul li a.active {
         background-color: rgb(231, 210, 18);
-    }
-    
-    @keyframes levitate {
-        0% {
-            top: 0px;
-        }
-        50% {
-            filter: drop-shadow(0 0 3px rgba(223, 223, 223, 0.507));
-            top: 4px;
-        }
-        100% {
-            top: 0px;
-        }
-    }
-    
-    @keyframes background-stutter {
-        0% {
-            opacity: 0.4;
-        }
-        50% {
-            opacity: 0.6;
-        }
-        100% {
-            opacity: 0.4;
-        }
-    }
-    
-    @keyframes sweep-hue {
-        from {
-            filter: hue-rotate(0);
-            -webkit-filter: hue-rotate(0);
-            -moz-filter: hue-rotate(0);
-            -ms-filter: hue-rotate(0);
-        }
-        to {
-            -webkit-filter: hue-rotate(360deg);
-            -moz-filter: hue-rotate(360deg);
-            -ms-filter: hue-rotate(360deg);
-            filter: hue-rotate(360deg);
-        }
     }
     
     .about-container {
@@ -271,10 +237,9 @@
     }
     
     .about-container .about-main .about-image {
-        flex: 4;
         position: relative;
-        height: 15rem;
-        width: 15rem;
+        height: 10rem;
+        width: 10rem;
         cursor: pointer;
         transition: all 0.4s ease;
     }
@@ -292,21 +257,20 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        height: 15rem;
+        min-height: 15rem;
         width: 50rem;
         background-color: rgba(255, 255, 255, 0.466);
         border-radius: 8px;
         margin: 0px 15px;
-        padding: 60px 40px;
-        font-size: 100;
+        padding: 20px 40px;
+        font-weight: 50;
         text-shadow: 1px 1px 5px #00000063;
     }
     
     .about-container .about-main .about-title {
         position: relative;
-        font-size: 35px;
+        font-size: 28px;
         font-family: 'Patua One', cursive;
-        left: -15px;
         top: -10px;
         text-shadow: 5px 5px 5px #000000;
     }
@@ -367,15 +331,15 @@
     }
     
     .skills-container .skills-main .skills-img img {
-        height: 5rem;
-        width: 5rem;
+        height: 6rem;
+        width: 6rem;
     }
     
     .skills-container .skills-card {
         background-color: #ffffff94;
         margin-top: 80px;
-        padding: 80px 0 15px 15px;
-        height: 80%;
+        padding: 50px 0 15px 15px;
+        height: 75%;
         width: 95%;
         overflow-y: scroll;
         border-radius: 5px;
@@ -507,7 +471,7 @@
         font-size: 25px;
         font-family: 'Patua One', cursive;
         left: -3px;
-        top: -10px;
+        top: -28px;
         text-shadow: 5px 5px 5px #000000;
     }
     
@@ -515,169 +479,255 @@
         height: 8rem;
         width: 8rem;
     }
-    /* Extra small devices (phones, 600px and down) */
     
-    @media only screen and (max-width: 600px) {
-        .navigation-reactive .nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            width: 100%;
-            top: 35rem;
-            z-index: 99999999;
-            transition: all 1s ease-in-out;
+    @keyframes levitate {
+        0% {
+            top: 0px;
         }
-        .about-container .about-main {
-            position: relative;
-            top: 58px;
+        50% {
+            filter: drop-shadow(0 0 3px rgba(223, 223, 223, 0.507));
+            top: 4px;
+        }
+        100% {
+            top: 0px;
+        }
+    }
+    
+    @keyframes background-stutter {
+        0% {
+            opacity: 0.4;
+        }
+        50% {
+            opacity: 0.6;
+        }
+        100% {
+            opacity: 0.4;
+        }
+    }
+    
+    @keyframes sweep-hue {
+        from {
+            filter: hue-rotate(0);
+            -webkit-filter: hue-rotate(0);
+            -moz-filter: hue-rotate(0);
+            -ms-filter: hue-rotate(0);
+        }
+        to {
+            -webkit-filter: hue-rotate(360deg);
+            -moz-filter: hue-rotate(360deg);
+            -ms-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+        }
+    }
+    /* Smartphones (portrait and landscape) ----------- */
+    
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        .navigation-reactive .nav {
+            bottom: 80px;
+        }
+        .navigation-reactive .nav ul li a {
+            font-size: 0.8rem;
+        }
+        .sticky-nav .nav ul li a {
+            font-size: 0.8rem;
         }
         .about-container .about-main .card {
-            position: relative;
-            height: 20rem;
-            border-radius: 8px;
-            top: -120px;
-            padding: 25px 40px;
+            bottom: 4.5rem;
+            min-height: 50%;
+            font-size: 18px;
         }
-        .contact-container .contact-main .contact-img {
-            top: 120px;
+        .about-container .about-main {
+            bottom: -2rem;
+        }
+        .about-container .about-main .about-image {
+            height: 8rem;
+            width: 8rem;
         }
         .contact-container .contact-main .card {
-            min-height: 35%;
+            position: relative;
             width: 90%;
-            background-color: rgba(255, 255, 255, 0.63);
-            border-radius: 5px;
-            padding: 30px 30px;
-            padding-top: 50px;
+            height: 45%;
+            bottom: -6.5rem;
+            padding: 20px 0;
         }
-        .contact-container .contact-main .card .contact-logo img {
+        .contact-container .contact-main {
+            position: relative;
+            bottom: 2rem;
+        }
+        .contact-container .contact-main .contact-img img {
+            width: 12rem;
+            height: 12rem;
+        }
+        .contact-container .contact-main .contact-logo img {
             width: 10rem;
         }
     }
-    /*     
-    @media only screen and (min-device-width: 360px) and (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {
-        .navigation-reactive .nav {
-            top: 30rem;
-        }
-        .navigation-reactive .nav ul li a,
-        .sticky-nav .nav ul li a {
-            font-size: 10px;
-        }
-        .about-container .about-main {
-            position: relative;
-            top: -5px;
-        }
-        .about-container .about-main .image img {
-            width: 5rem;
-        }
-        .about-container .about-main .card {
-            position: relative;
-            height: 20rem;
-            border-radius: 8px;
-            top: -110px;
-            padding: 25px 20px;
-            font-size: 15px;
-        }
-        .contact-container .contact-main .contact-img {
-            top: 80px;
-        }
-        .contact-container .contact-main .contact-img img {
-            width: 5rem;
-            height: 5rem;
-        }
-        .contact-container .contact-main .card {
-            width: 90%;
-            background-color: rgba(255, 255, 255, 0.63);
-            border-radius: 5px;
-        }
-        .contact-container .contact-main .card .contact-logo img {
-            width: 8rem;
-        }
+    /* Smartphones (landscape) ----------- */
+    
+    @media only screen and (min-width: 321px) {
+        /* Styles */
+    }
+    /* Smartphones (portrait) ----------- */
+    
+    @media only screen and (max-width: 320px) {
+        /* Styles */
+    }
+    /* iPads (portrait and landscape) ----------- */
+    
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /* Styles */
+    }
+    /* iPads (landscape) ----------- */
+    
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+        /* Styles */
+    }
+    /* iPads (portrait) ----------- */
+    
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+        /* Styles */
+    }
+    /**********
+    iPad 3
+    **********/
+    
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+        /* Styles */
     }
     
-    @media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) {
-        .navigation-reactive .nav {
-            top: 38rem;
-        }
-        .navigation-reactive .nav ul li a,
-        .sticky-nav .nav ul li a {
-            font-size: 10px;
-        }
-        .about-container .about-main {
-            position: relative;
-            top: 20px;
-        }
-        .about-container .about-main .image img {
-            width: 8rem;
-        }
-        .about-container .about-main .card {
-            position: relative;
-            height: 20rem;
-            border-radius: 8px;
-            top: -150px;
-            padding: 25px 20px;
-            font-size: 15px;
-        }
-        .contact-container .contact-main .contact-img {
-            top: 120px;
-        }
-        .contact-container .contact-main .contact-img img {
-            width: 8rem;
-            height: 8rem;
-        }
-        .contact-container .contact-main .card {
-            width: 90%;
-            background-color: rgba(255, 255, 255, 0.63);
-            border-radius: 5px;
-        }
-        .contact-container .contact-main .card .contact-logo img {
-            width: 8rem;
-        }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+        /* Styles */
+    }
+    /* Desktops and laptops ----------- */
+    
+    @media only screen and (min-width: 1224px) {
+        /* Styles */
+    }
+    /* Large screens ----------- */
+    
+    @media only screen and (min-width: 1824px) {
+        /* Styles */
+    }
+    /* iPhone 4 ----------- */
+    
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+        /* Styles */
     }
     
-    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+        /* Styles */
+    }
+    /* iPhone 5 ----------- */
+    
+    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+        /* Styles */
+    }
+    
+    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
         .navigation-reactive .nav {
-            top: 28rem;
+            top: 18rem;
         }
-        .navigation-reactive .nav ul li a,
+        .navigation-reactive .nav ul li a {
+            font-size: 0.6rem;
+        }
         .sticky-nav .nav ul li a {
-            font-size: 10px;
+            font-size: 0.6rem;
         }
-        .about-container .about-main {
-            position: relative;
-            top: 20px;
+        .landing-container .landing-main .landing-image {
+            width: 13rem;
+            height: 13rem;
         }
-        .about-container .about-main .image img {
-            width: 5rem;
-        }
-        .about-container .about-main .image .about-title {
-            font-size: 25px;
-            left: 1px;
+        .landing-container .landing-main .landing-image:hover {
+            width: 15rem;
+            height: 15rem;
         }
         .about-container .about-main .card {
-            position: relative;
-            height: 20rem;
-            border-radius: 8px;
-            top: -60px;
-            padding: 25px 20px;
-            font-size: 15px;
+            bottom: 4.5rem;
+            min-height: 50%;
+            font-size: 13px;
         }
-        .contact-container .contact-main .contact-img {
-            top: 80px;
-        }
-        .contact-container .contact-main .contact-img img {
-            width: 4rem;
-            height: 4rem;
-        }
-        .contact-container .contact-main .contact-img .contact-title {
-            font-size: 25px;
+        .about-container .about-main {
+            bottom: -2rem;
         }
         .contact-container .contact-main .card {
+            position: relative;
             width: 90%;
-            background-color: rgba(255, 255, 255, 0.63);
-            border-radius: 5px;
+            height: 50%;
+            bottom: -6.5rem;
+            padding: 20px 0;
         }
-        .contact-container .contact-main .card .contact-logo img {
-            width: 8rem;
+        .contact-container .contact-main {
+            position: relative;
+            bottom: 2rem;
         }
-    } */
+        .contact-container .contact-main .contact-img img {
+            width: 10rem;
+            height: 10rem;
+        }
+        .contact-container .contact-main .contact-logo img {
+            width: 5rem;
+        }
+    }
+    /* iPhone 6, 7, 8 ----------- */
+    
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+        /* Styles */
+    }
+    
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+        /* Styles */
+    }
+    /* iPhone 6+, 7+, 8+ ----------- */
+    
+    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+        /* Styles */
+    }
+    
+    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+        /* Styles */
+    }
+    /* iPhone X ----------- */
+    
+    @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+        /* Styles */
+    }
+    
+    @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+        /* Styles */
+    }
+    /* iPhone XS Max, XR ----------- */
+    
+    @media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+        /* Styles */
+    }
+    
+    @media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+        /* Styles */
+    }
+    /* Samsung Galaxy S3 ----------- */
+    
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+        /* Styles */
+    }
+    
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+        /* Styles */
+    }
+    /* Samsung Galaxy S4 ----------- */
+    
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+        /* Styles */
+    }
+    
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+        /* Styles */
+    }
+    /* Samsung Galaxy S5 ----------- */
+    
+    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+        /* Styles */
+    }
+    
+    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+        /* Styles */
+    }
