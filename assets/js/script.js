@@ -36,9 +36,10 @@ $(document).ready(function() {
         $.each(navList, function(e, elem) {
             let place = elem.target[0].getBoundingClientRect();
             let anchor = elem.anchor[0];
+
             if (place.top < window.innerHeight && place.bottom > 0) {
                 history.pushState({}, '', elem.id);
-
+                $(document).attr('title', "Goutham's Portfolio | " + elem.id.replace("#", "").substr(0, 1).toUpperCase() + elem.id.replace("#", "").substr(1))
                 $('#nav .active').each(function(i) {
                     $(this).removeClass('active');
                 })
