@@ -5,6 +5,10 @@ $(document).ready(function() {
         $('#landing-image').attr('src', './assets/images/Bitmoji/1.png');
     });
 
+    $(window).on('popstate', function() {
+        window.history.go(-1);
+    });
+
 
 
     let navList = [];

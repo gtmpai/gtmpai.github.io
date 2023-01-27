@@ -120,7 +120,7 @@
         align-items: center;
         position: absolute;
         width: 100%;
-        top: 31rem;
+        bottom: 18rem;
         z-index: 99999999;
         transition: all 1s ease-in-out;
     }
