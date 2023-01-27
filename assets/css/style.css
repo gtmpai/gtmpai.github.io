@@ -519,11 +519,11 @@
             filter: hue-rotate(360deg);
         }
     }
-    /* Smartphones (portrait and landscape) ----------- */
-    
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+
+    @media only screen and (max-device-width: 767px) {
         .navigation-reactive .nav {
-            bottom: 80px;
+            bottom: 180px;
         }
         .navigation-reactive .nav ul li a {
             font-size: 0.8rem;
@@ -532,23 +532,25 @@
             font-size: 0.8rem;
         }
         .about-container .about-main .card {
-            bottom: 4.5rem;
-            min-height: 50%;
-            font-size: 18px;
+            bottom: 20%;
+            font-size: 13px;
         }
         .about-container .about-main {
             bottom: -2rem;
         }
         .about-container .about-main .about-image {
-            height: 8rem;
-            width: 8rem;
+            height: 7rem;
+            width: 7rem;
+        }
+        .about-container .about-main .about-title {
+           font-size: 18px;
         }
         .contact-container .contact-main .card {
             position: relative;
             width: 90%;
             height: 45%;
             bottom: -6.5rem;
-            padding: 20px 0;
+            padding: 10px 0;
         }
         .contact-container .contact-main {
             position: relative;
@@ -561,6 +563,17 @@
         .contact-container .contact-main .contact-logo img {
             width: 10rem;
         }
+       }
+
+
+
+    /* Smartphones (portrait and landscape) ----------- */
+    
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        /* .navigation-reactive .nav {
+            bottom: 250px;
+        } */
+        
     }
     /* Smartphones (landscape) ----------- */
     
@@ -644,7 +657,7 @@
         .about-container .about-main .card {
             bottom: 4.5rem;
             min-height: 50%;
-            font-size: 13px;
+            font-size: 11px;
         }
         .about-container .about-main {
             bottom: -2rem;
